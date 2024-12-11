@@ -1,0 +1,52 @@
+* {
+  font-family: "Lexend", sans-serif;
+  font-weight: 250;
+}
+
+body {
+  background-color: #000;
+}
+
+.container {
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+}
+header .title-section {
+  width: 100%;
+}
+header .title-section .title {
+  font-family: "Goldman", sans-serif;
+  font-size: 80px;
+  margin: 0;
+}
+header .title-section .title-body {
+  margin-bottom: 80px;
+}
+header .hero {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+header .hero .hero-img {
+  width: 100%;
+}
+
+.btn-solid {
+  font-family: "Goldman", sans-serif;
+  padding: 10px 15px;
+}

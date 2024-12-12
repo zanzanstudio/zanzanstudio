@@ -4,49 +4,69 @@ $SecondaryFont: "Lexend", sans-serif;
 *{
     font-family: $SecondaryFont;
     font-weight: 250;
+    color: white;
+}
+
+
+header{
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    max-height: 100%;
+    // background-color: salmon;
+}
+.title{
+    font-family: $PrimaryFont;
+    font-size: 80px;
+    margin: 0;
+}
+.hero{ 
+    .hero-img{
+        width: 100%;
+    }
+
 }
 body{
     background-color: #000;
 }
-.container{
-    padding: 20px 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // background: url("/Asset/img/Zanzan-Studio-Logo-3d-3.jpg") no-repeat fixed right;
-    // background-size: 50%;
-    color: white;
-    position: absolute;
-    top: 0;left: 0;bottom: 0;right: 0;
-    max-height: 100%;
+// .container{
+//     padding: 20px 100px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+// header{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     // background: url("/Asset/img/Zanzan-Studio-Logo-3d-3.jpg") no-repeat fixed right;
+//     // background-size: 50%;
+//     color: white;
+//     position: absolute;
+//     top: 0;left: 0;bottom: 0;right: 0;
+//     max-height: 100%;
 
-    .title-section{
-        width: 100%;
-        .title{
-            font-family: $PrimaryFont;
-            font-size: 80px;
-            margin: 0;
-        }
-        .title-body{
-            margin-bottom: 80px;
-        }
-    }
-    .hero{ 
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        .hero-img{
-            width: 100%;
-        }
+//     .title-section{
+//         width: 100%;
+//         .title{
+//             font-family: $PrimaryFont;
+//             font-size: 80px;
+//             margin: 0;
+//         }
+//         .title-body{
+//             margin-bottom: 80px;
+//         }
+//     }
+//     .hero{ 
+//         background: #fff;
+//         display: flex;
+//         justify-content: center;
+//         .hero-img{
+//             width: 100%;
+//         }
 
-    }
-}
-.btn-solid{
-    font-family: $PrimaryFont;
-    padding: 10px 15px;
-}
+//     }
+// }
+// .btn-solid{
+//     font-family: $PrimaryFont;
+//     padding: 10px 15px;
+// }

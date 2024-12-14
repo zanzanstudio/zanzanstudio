@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lexend:wght@100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/@pqina/flip/dist/flip.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,12 +25,30 @@
                         <p>Under Constructions</p>
                         <h1 class="title display-1 mb-2">COMING SOON</h1>
                         <p class="title-body">Zanzan Studio is currently under construction, but we’re still here for
-                            you! <br>
-                            For inquiries or
-                            more
-                            information, feel free to contact us. <br> Let’s create something great together.</p>
+                            you! For inquiries or more information, feel free to contact us. Let’s create something
+                            great together.</p>
 
+
+                        <div class="count col-8 mt-4">
+                            <div class="tick" data-did-init="handleTickInit">
+                                <div data-repeat="true" data-layout="horizontal fit"
+                                    data-transform="preset(d, h, m, s) -> delay">
+                                    <div class="tick-group">
+                                        <div data-key="value" data-repeat="true"
+                                            data-transform="pad(00) -> split -> delay">
+                                            <span data-view="flip"></span>
+                                        </div>
+
+                                        <span data-key="label" data-view="text" class="tick-label"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tick-onended-message" style="display: none">
+                                <p>Time's up</p>
+                            </div>
+                        </div>
                         <a href="#" type="button" class="btn btn-light mt-5">CONTACT US</a>
+
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -40,10 +59,69 @@
             </div>
         </header>
     </div>
+
+    <!-- Countdown -->
+    <script>
+        function handleTickInit(tick) {
+            // uncomment to set labels to different language
+            /*
+    var locale = {
+        YEAR_PLURAL: 'Jaren',
+        YEAR_SINGULAR: 'Jaar',
+        MONTH_PLURAL: 'Maanden',
+        MONTH_SINGULAR: 'Maand',
+        WEEK_PLURAL: 'Weken',
+        WEEK_SINGULAR: 'Week',
+        DAY_PLURAL: 'Dagen',
+        DAY_SINGULAR: 'Dag',
+        HOUR_PLURAL: 'Uren',
+        HOUR_SINGULAR: 'Uur',
+        MINUTE_PLURAL: 'Minuten',
+        MINUTE_SINGULAR: 'Minuut',
+        SECOND_PLURAL: 'Seconden',
+        SECOND_SINGULAR: 'Seconde',
+        MILLISECOND_PLURAL: 'Milliseconden',
+        MILLISECOND_SINGULAR: 'Milliseconde'
+    };
+    
+    for (var key in locale) {
+        if (!locale.hasOwnProperty(key)) { continue; }
+        tick.setConstant(key, locale[key]);
+    }
+    */
+
+            // format of due date is ISO8601
+            // https://en.wikipedia.org/wiki/ISO_8601
+
+            // '2018-01-31T12:00:00'        to count down to the 31st of January 2018 at 12 o'clock
+            // '2019'                       to count down to 2019
+            // '2018-01-15T10:00:00+01:00'  to count down to the 15th of January 2018 at 10 o'clock in timezone GMT+1
+
+            var nextYear = new Date().getFullYear() + 1;
+
+            // create the countdown counter
+            var counter = Tick.count.down(
+                nextYear + "-01-01T06:00:00+07:00"
+            );
+
+            counter.onupdate = function (value) {
+                tick.value = value;
+            };
+
+            counter.onended = function () {
+                // redirect, uncomment the next line
+                // window.location = 'my-location.html'
+                // hide counter, uncomment the next line
+                // tick.root.style.display = 'none';
+                // show message, uncomment the next line
+                // document.querySelector('.tick-onended-message').style.display = '';
+            };
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>

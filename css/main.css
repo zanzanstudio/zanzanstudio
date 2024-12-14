@@ -36,3 +36,56 @@ body {
 .btn {
   font-family: "Goldman", sans-serif;
 }
+
+.count .tick-credits {
+  display: none;
+}
+.count .tick {
+  font-size: 1rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.count .tick-flip, .count .tick-text-inline {
+  font-size: 2.5em;
+}
+.count .tick-label {
+  margin-top: 1em;
+  font-size: 1em;
+}
+.count .tick-char {
+  width: 1.5em;
+}
+.count .tick-text-inline {
+  display: inline-block;
+  text-align: center;
+  min-width: 1em;
+}
+.count .tick-text-inline + .tick-text-inline {
+  margin-left: -0.325em;
+}
+.count .tick-group {
+  margin: 0 0.5em;
+  text-align: center;
+  margin-left: 0;
+}
+.count .tick-text-inline {
+  color: rgb(230, 240, 255) !important;
+}
+.count .tick-label {
+  color: rgb(230, 240, 255) !important;
+}
+.count .tick-flip-panel {
+  color: rgb(0, 0, 0) !important;
+}
+.count .tick-flip * {
+  font-family: "Goldman", sans-serif !important;
+}
+.count .tick-flip-panel-text-wrapper {
+  line-height: 1.35 !important;
+}
+.count .tick-flip-panel {
+  background: linear-gradient(0deg, rgb(45, 45, 45) 0%, rgb(15, 15, 15) 42%, rgb(73, 73, 73) 100%);
+}
+.count .tick-flip {
+  border-radius: 0em !important;
+}

@@ -7,12 +7,16 @@ $SecondaryFont: "Lexend", sans-serif;
     color: white;
 }
 
-
+.wrapped{
+    // background: url("../Asset/img/Untitled-1-01.png") no-repeat fixed 500px 0px;
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    max-height: 100%;
+}
 header{
     position: absolute;
     top: 0;left: 0;bottom: 0;right: 0;
     max-height: 100%;
-    background: url("../Asset/img/Untitled-1-01.png") no-repeat fixed 500px 0px;
     .title{
         font-family: $PrimaryFont;
         font-size: 80px;

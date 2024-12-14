@@ -23,7 +23,6 @@ header {
 }
 header .title {
   font-family: "Goldman", sans-serif;
-  font-size: 80px;
   margin: 0;
 }
 header .hero .hero-img {
@@ -32,4 +31,8 @@ header .hero .hero-img {
 
 body {
   background-color: #000;
+}
+
+.btn {
+  font-family: "Goldman", sans-serif;
 }

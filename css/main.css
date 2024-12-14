@@ -35,6 +35,7 @@ body {
 
 .btn {
   font-family: "Goldman", sans-serif;
+  border-radius: 0;
 }
 
 .count .tick-credits {
